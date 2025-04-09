@@ -1,5 +1,1 @@
- Procfile
-
-web: gunicorn storefront.wsgi --log-file - 
-#or works good with external database
-web: python manage.py migrate && gunicorn storefront.wsgi
+web: python manage.py migrate && gunicorn storefront.wsgi:application
